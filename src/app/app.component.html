@@ -1,0 +1,23 @@
+<div>
+  <input type="number" name="statusCode" value="value1" [(ngModel)]="value1" (input)="onInputChange()" />
+</div>
+
+<div>
+{{showDescription[0]?.name}}
+</div>
+<div>
+{{showDescription[0]?.type}}
+</div>
+<div>
+{{showDescription[0]?.desc}}
+</div>
+<div *ngIf="showDescription[0]?.subPoints">
+ <ul>
+  <li *ngFor="let item of showDescription[0]?.subPoints">
+    {{item}}
+  </li>
+ </ul>
+</div>
+<div>
+{{showDescription[0]?.fix}}
+</div>
