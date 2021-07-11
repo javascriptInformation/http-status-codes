@@ -2,7 +2,6 @@ p {
   font-family: Lato;
 }
 input[type=number] {
-  width: 25%;
   padding: 12px 20px;
   margin: 38px 30px;
   display: inline-block;
