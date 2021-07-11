@@ -50,8 +50,9 @@ input[type='number'] {
 /* Style the counter cards */
 .card-error {
   box-shadow: 3px 4px 8px 0 green;
-  padding: 26px;
   width: 300px;
+  margin-left: 300px;
+  margin-bottom: 50px;
   text-align: center;
   background-color: lightsalmon;
 }
