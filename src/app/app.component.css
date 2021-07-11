@@ -1,3 +1,62 @@
 p {
   font-family: Lato;
 }
+input[type=number] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 green;
+  padding: 16px;
+  text-align: center;
+  background-color: lightsalmon;
+}
+/* Style the counter cards */
+.card-error {
+  box-shadow: 3px 4px 8px 0 green;
+  padding: 26px;
+  width: 300px;
+  text-align: center;
+  background-color: lightsalmon;
+}
+
+.show-class {
+  padding-top: 130px;
+  padding-left: 250px;
+}
