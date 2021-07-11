@@ -1,7 +1,7 @@
 p {
   font-family: Lato;
 }
-input[type=number] {
+input[type='number'] {
   padding: 12px 20px;
   margin: 38px 30px;
   display: inline-block;
@@ -43,6 +43,7 @@ input[type=number] {
 .card {
   box-shadow: 0 4px 8px 0 green;
   padding: 16px;
+  margin-bottom: 10px;
   text-align: center;
   background-color: lightsalmon;
 }
@@ -57,5 +58,35 @@ input[type=number] {
 
 .show-class {
   padding-top: 130px;
-  padding-left: 250px;
+  padding-left: 30px;
+}
+
+
+.show-code-nmubers{
+  width: 50%;
+  margin-left: 320px;
+}
+
+.button {
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px 50px;;
+  margin-bottom: 10px;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

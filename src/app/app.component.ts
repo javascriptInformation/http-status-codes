@@ -13,12 +13,12 @@ export class AppComponent {
 
   showDescription = [];
 
-  onInputChange() {
-    console.log(this.value1);
+  onInputChange(code) {
+    // console.log(this.value1,code);
     this.showDescription = [];
     this.showDescription = this.statusCodeMapping.filter(
-      item => item.code === this.value1
+      item => item.code === code
     );
-    console.log(this.showDescription);
+    // console.log(this.showDescription);
   }
 }

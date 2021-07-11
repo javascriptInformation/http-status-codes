@@ -1,44 +1,70 @@
-<div class="input-tag">
-  <input type="number" name="statusCode" value="value1" [(ngModel)]="value1" (input)="onInputChange()"
-  placeholder="Enter the code" />
-</div>
+<div class="container">
+  <div class="card">
+    <p>
+      HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes:
 
-<div class="row" *ngIf="showDescription.length > 0">
+      Informational responses (100–199)<br>
+      Successful responses (200–299)<br>
+      Redirects (300–399)<br>
+      Client errors (400–499)<br>
+      Server errors (500–599) <br>  
+     </p>
+  </div>
+  <div class="show-code-nmubers">
+      <button class="button" *ngFor="let code of statusCodeMapping" (click)="onInputChange(code.code)">
+        {{code.code}}
+      </button>
+  </div>
+  <!-- <div class="input-tag">
+    <label>Code:</label>
+    <input type="number" name="statusCode" value="value1" [(ngModel)]="value1" (input)="onInputChange('value')"
+    placeholder="Enter the code" />
+  </div> -->
 
-  <div class="column">
-    <div class="card">
-      <h3>Name:</h3>
-      <p>{{showDescription[0]?.name}}</p>
+  <div class="row" *ngIf="showDescription.length > 0">
+
+    <div class="column">
+      <div class="card">
+        <h3>Selected Code is:</h3>
+        <p>{{showDescription[0]?.code}}</p>
+      </div>
     </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <h3>Type:</h3>
-      <p>{{showDescription[0]?.type}}</p>
+
+    <div class="column">
+      <div class="card">
+        <h3>Name:</h3>
+        <p>{{showDescription[0]?.name}}</p>
+      </div>
     </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <h3>Description:</h3>
-      <p>{{showDescription[0]?.desc}}</p>
+    <div class="column">
+      <div class="card">
+        <h3>Type:</h3>
+        <p>{{showDescription[0]?.type}}</p>
+      </div>
     </div>
-  </div>
-
-  <div class="column" *ngIf="showDescription[0]?.subPoints">
-    <div class="card">
-      <ul>
-        <li *ngFor="let item of showDescription[0]?.subPoints">
-          {{item}}
-        </li>
-      </ul>
+    <div class="column">
+      <div class="card">
+        <h3>Description:</h3>
+        <p>{{showDescription[0]?.desc}}</p>
+      </div>
     </div>
+
+    <div class="column" *ngIf="showDescription[0]?.subPoints">
+      <div class="card">
+        <ul>
+          <li *ngFor="let item of showDescription[0]?.subPoints">
+            {{item}}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
   </div>
 
-
-</div>
-
-<div class="show-class">
-  <div class="card-error" *ngIf="showDescription.length == 0">
-    The code you are checking for not exists or the code description might have missed.
-  </div>
+  <!-- <div class="show-class">
+    <div class="card-error" *ngIf="showDescription.length == 0">
+      The code you are checking for not exists or the code description might have missed.
+    </div>
+  </div> -->
 </div>
