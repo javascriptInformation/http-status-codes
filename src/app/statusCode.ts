@@ -112,7 +112,7 @@ export const statusCodeMapping = [
     code: 302,
     desc:
       'This response code means that the URI of requested resource has been changed temporarily. Further changes in the URI might be made in the future. Therefore, this same URI should be used by the client in future requests.',
-    name: 'Early Hints',
+    name: 'Found',
     type: 'Redirection messages'
   },
 
@@ -128,7 +128,7 @@ export const statusCodeMapping = [
     code: 304,
     desc:
       'The HTTP 304 Not Modified client redirection response code indicates that there is no need to retransmit the requested resources. It is an implicit redirection to a cached resource. This happens when the request method is safe, like a GET or a HEAD request, or when the request is conditional and uses a If-None-Match or a If-Modified-Since header.',
-    name: 'Early Hints',
+    name: 'Not Modified',
     type: 'Redirection messages'
   },
 
@@ -362,7 +362,7 @@ export const statusCodeMapping = [
     desc:
       'The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore that must not return this code) are GET and HEAD.\
   ',
-    name: 'INot Implemented',
+    name: 'Not Implemented',
     type: 'Server error responses'
   },
 
@@ -378,7 +378,7 @@ export const statusCodeMapping = [
     code: 503,
     desc:
       'The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded. Note that together with this response, a user-friendly page explaining the problem should be sent. This response should be used for temporary conditions and the Retry-After: HTTP header should, if possible, contain the estimated time before the recovery of the service. The webmaster must also take care about the caching-related headers that are sent along with this response, as these temporary condition responses should usually not be cached.',
-    name: 'ervice Unavailable',
+    name: 'service Unavailable',
     type: 'Server error responses'
   },
 
