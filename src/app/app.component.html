@@ -1,23 +1,44 @@
-<div>
-  <input type="number" name="statusCode" value="value1" [(ngModel)]="value1" (input)="onInputChange()" />
+<div class="input-tag">
+  <input type="number" name="statusCode" value="value1" [(ngModel)]="value1" (input)="onInputChange()"
+  placeholder="Enter the code" />
 </div>
 
-<div>
-{{showDescription[0]?.name}}
+<div class="row" *ngIf="showDescription.length > 0">
+
+  <div class="column">
+    <div class="card">
+      <h3>Name:</h3>
+      <p>{{showDescription[0]?.name}}</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <h3>Type:</h3>
+      <p>{{showDescription[0]?.type}}</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <h3>Description:</h3>
+      <p>{{showDescription[0]?.desc}}</p>
+    </div>
+  </div>
+
+  <div class="column" *ngIf="showDescription[0]?.subPoints">
+    <div class="card">
+      <ul>
+        <li *ngFor="let item of showDescription[0]?.subPoints">
+          {{item}}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
 </div>
-<div>
-{{showDescription[0]?.type}}
-</div>
-<div>
-{{showDescription[0]?.desc}}
-</div>
-<div *ngIf="showDescription[0]?.subPoints">
- <ul>
-  <li *ngFor="let item of showDescription[0]?.subPoints">
-    {{item}}
-  </li>
- </ul>
-</div>
-<div>
-{{showDescription[0]?.fix}}
+
+<div class="show-class">
+  <div class="card-error" *ngIf="showDescription.length == 0">
+    The code you are checking for not exists or the code description might have missed.
+  </div>
 </div>

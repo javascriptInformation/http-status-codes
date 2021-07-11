@@ -8,7 +8,7 @@ import { statusCodeMapping } from './statusCode';
 })
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
-  value1 = 100;
+  value1;
   statusCodeMapping = [...statusCodeMapping];
 
   showDescription = [];
